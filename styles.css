@@ -3,9 +3,72 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-color: azure;
+  background-color: #c6c6c6;
+  height: 100%;
+  width: 100%;
+}
+
+body h1 {
+  width: 100vh;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 60px;
+}
+
+body form {
+  width: 30vw;
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px auto;
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+body form input {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+body form #toBeTranslated {
+  height: 20vh;
+}
+
+body form #submit {
+  width: 100px;
+  margin: 0 auto;
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 5px;
+}
+
+body h2 {
+  width: 40vh;
+  margin: 0px auto;
+  text-align: left;
+}
+
+body p {
+  border: 2px solid black;
+  height: 30vh;
+  width: 30vw;
+  margin: 0px auto;
+  font-size: 40px;
+  padding: 20px;
+  border-radius: 20px;
 }
 /*# sourceMappingURL=styles.css.map */
