@@ -4,12 +4,12 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #222222;
+  color: #dfdddd;
 }
 
 body {
-  background: -webkit-gradient(linear, left top, right top, from(#108dc7), to(#ef8e38));
-  background: linear-gradient(90deg, #108dc7, #ef8e38);
+  background: -webkit-gradient(linear, left top, right top, from(#485563), to(#29323c));
+  background: linear-gradient(90deg, #485563, #29323c);
   height: 100vh;
   width: 100vw;
 }
@@ -53,7 +53,7 @@ body .container .text-input form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 30px solid rgba(34, 34, 34, 0.85);
+  border: 30px solid rgba(223, 221, 221, 0.85);
   padding: 10px;
   border-radius: 10px;
   -webkit-box-shadow: 20px 20px 50px #353535;
@@ -64,32 +64,32 @@ body .container .text-input form {
 body .container .text-input form input {
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid rgba(34, 34, 34, 0.85);
+  border-bottom: 2px solid rgba(223, 221, 221, 0.85);
   padding: 5px;
 }
 
 body .container .text-input form input::-webkit-input-placeholder {
-  color: rgba(34, 34, 34, 0.85);
+  color: rgba(223, 221, 221, 0.85);
   outline: none;
 }
 
 body .container .text-input form input:-ms-input-placeholder {
-  color: rgba(34, 34, 34, 0.85);
+  color: rgba(223, 221, 221, 0.85);
   outline: none;
 }
 
 body .container .text-input form input::-ms-input-placeholder {
-  color: rgba(34, 34, 34, 0.85);
+  color: rgba(223, 221, 221, 0.85);
   outline: none;
 }
 
 body .container .text-input form input::placeholder {
-  color: rgba(34, 34, 34, 0.85);
+  color: rgba(223, 221, 221, 0.85);
   outline: none;
 }
 
 body .container .text-input form input:focus {
-  outline: 2px solid rgba(34, 34, 34, 0.85);
+  outline: 2px solid rgba(223, 221, 221, 0.85);
 }
 
 body .container .text-input form #toBeTranslated {
@@ -109,11 +109,11 @@ body .container .text-input form #submit {
   cursor: pointer;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
-  border: 3px solid rgba(34, 34, 34, 0.85);
+  border: 3px solid rgba(223, 221, 221, 0.85);
 }
 
 body .container .text-input form #submit:hover {
-  background-color: rgba(34, 34, 34, 0.85);
+  background-color: rgba(223, 221, 221, 0.85);
   color: whitesmoke;
 }
 
@@ -142,7 +142,7 @@ body .container .text-output h2 {
 }
 
 body .container .text-output p {
-  border: 30px solid rgba(34, 34, 34, 0.85);
+  border: 30px solid rgba(223, 221, 221, 0.85);
   height: 40vh;
   width: 25vw;
   font-size: 40px;

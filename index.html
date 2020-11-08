@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f25651ee7a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Morse Code Translator</title>
 </head>
 <body>
     <h1>Morse Code Translator</h1>
     <h2 class="morseHeading">-- --- .-. ... . -.-. --- -.. . - .-. .- -. ... .-.. .- - --- .-.</h2>
     <div class="container">
-        <div class="text-input">
+        <div class="text-input" data-aos="flip-right">
             <h2>Text to translate:</h2>
             <form action="">
                 <label for="toBeTranslated"></label>
@@ -20,7 +21,7 @@
             </form>
         </div>
         <span class="far fa-arrow-alt-circle-right"></span>
-        <div class="text-output">
+        <div class="text-output" data-aos="flip-left">
             <h2>Translation:</h2>
             <p id="output"></p>
         </div>
@@ -28,5 +29,14 @@
 
 
     <script src="./main.js" type="module"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        offset: 120, 
+        delay: 50, // values from 0 to 3000, with step 50ms
+        duration: 2000, // values from 0 to 3000, with step 50ms
+        easing: 'ease',
+    });
+  </script>
 </body>
 </html>
