@@ -18,7 +18,6 @@ const translate = () => {
     // join morse letters back into string
     const engToMorseStr = engToMorseArray.join("")
     console.log(engToMorseStr);
-    // return engToMorseStr;
     output.innerHTML = engToMorseStr;
 }
 
