@@ -3,25 +3,49 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #222222;
 }
 
 body {
-  background-color: #c6c6c6;
-  height: 100%;
-  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#108dc7), to(#ef8e38));
+  background: linear-gradient(90deg, #108dc7, #ef8e38);
+  height: 100vh;
+  width: 100vw;
 }
 
 body h1 {
-  width: 100vh;
-  margin: 20px auto;
-  text-align: center;
+  width: 100vw;
   font-size: 60px;
+  margin-top: 50px;
+  text-align: center;
 }
 
-body form {
-  width: 30vw;
-  height: 20vh;
+body .morseHeading {
+  text-align: center;
+  font-size: 40px;
+  margin: 10px;
+}
+
+body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 100px auto;
+  width: 70vw;
+  height: 45vh;
+}
+
+body .container h2 {
+  font-size: 40px;
+}
+
+body .container .text-input form {
+  width: 25vw;
+  height: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,46 +53,138 @@ body form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 50px auto;
-  border: 2px solid black;
-  padding: 20px;
-  border-radius: 20px;
+  border: 30px solid rgba(34, 34, 34, 0.85);
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 20px 20px 50px #353535;
+          box-shadow: 20px 20px 50px #353535;
+  background-color: rgba(223, 218, 218, 0.351);
 }
 
-body form input {
+body .container .text-input form input {
   background-color: transparent;
-  border: 2px solid white;
+  border: none;
+  border-bottom: 2px solid rgba(34, 34, 34, 0.85);
+  padding: 5px;
+}
+
+body .container .text-input form input::-webkit-input-placeholder {
+  color: rgba(34, 34, 34, 0.85);
+  outline: none;
+}
+
+body .container .text-input form input:-ms-input-placeholder {
+  color: rgba(34, 34, 34, 0.85);
+  outline: none;
+}
+
+body .container .text-input form input::-ms-input-placeholder {
+  color: rgba(34, 34, 34, 0.85);
+  outline: none;
+}
+
+body .container .text-input form input::placeholder {
+  color: rgba(34, 34, 34, 0.85);
+  outline: none;
+}
+
+body .container .text-input form input:focus {
+  outline: 2px solid rgba(34, 34, 34, 0.85);
+}
+
+body .container .text-input form #toBeTranslated {
+  height: 25vh;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+body .container .text-input form #submit {
+  width: 120px;
+  font-size: 18px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: transparent;
+  color: border-color;
   border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  border: 3px solid rgba(34, 34, 34, 0.85);
 }
 
-body form #toBeTranslated {
-  height: 20vh;
-}
-
-body form #submit {
-  width: 100px;
-  margin: 10px auto;
-  background-color: black;
+body .container .text-input form #submit:hover {
+  background-color: rgba(34, 34, 34, 0.85);
   color: whitesmoke;
-  border-radius: 5px;
 }
 
-body h2 {
+body .container svg {
+  font-size: 8.5rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+  -webkit-animation-name: leftToRight;
+          animation-name: leftToRight;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+body .container .text-output {
+  width: 25vw;
+  height: 40vh;
+}
+
+body .container .text-output h2 {
   width: 40vh;
-  margin: 0px auto;
   text-align: left;
 }
 
-body p {
-  border: 2px solid black;
-  height: 30vh;
-  width: 30vw;
-  margin: 0px auto;
+body .container .text-output p {
+  border: 30px solid rgba(34, 34, 34, 0.85);
+  height: 40vh;
+  width: 25vw;
   font-size: 40px;
-  padding: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 20px 20px 50px #353535;
+          box-shadow: 20px 20px 50px #353535;
+  background-color: rgba(223, 218, 218, 0.351);
+}
+
+@-webkit-keyframes leftToRight {
+  0% {
+    left: -55px;
+  }
+  50% {
+    left: 55px;
+  }
+  100% {
+    left: -55px;
+  }
+}
+
+@keyframes leftToRight {
+  0% {
+    left: -55px;
+  }
+  50% {
+    left: 55px;
+  }
+  100% {
+    left: -55px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  * {
+    width: 100vw;
+  }
+  body .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

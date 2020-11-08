@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f25651ee7a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles.css">
     <title>Morse Code Translator</title>
 </head>
 <body>
     <h1>Morse Code Translator</h1>
-    <form action="">
-        <label for="toBeTranslated">Input:</label>
-        <input type="text" id="toBeTranslated" placeholder="Type English here...">
-        <input type="submit" id="submit" value="SUBMIT">
-    </form>
-    <h2>Morse code:</h2>
-    <p id="output"></p>
+    <h2 class="morseHeading">-- --- .-. ... . -.-. --- -.. . - .-. .- -. ... .-.. .- - --- .-.</h2>
+    <div class="container">
+        <div class="text-input">
+            <h2>Text to translate:</h2>
+            <form action="">
+                <label for="toBeTranslated"></label>
+                <input type="textarea" id="toBeTranslated" placeholder="Enter text here...">
+                <input type="submit" id="submit" value="TRANSLATE">
+            </form>
+        </div>
+        <span class="far fa-arrow-alt-circle-right"></span>
+        <div class="text-output">
+            <h2>Translation:</h2>
+            <p id="output"></p>
+        </div>
+    </div>
 
 
     <script src="./main.js" type="module"></script>

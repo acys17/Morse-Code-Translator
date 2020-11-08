@@ -1,65 +1,147 @@
+$border-color: rgb(34, 34, 34);
+$text-color: whitesmoke;
+$background-color: linear-gradient(90deg,#108dc7, #ef8e38);
+$border-radius: 10px;
+$dark-color: rgba($border-color, 0.85);
+$box-shadow: 20px 20px 50px rgb(53, 53, 53);
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: $border-color;
 }
 
 body {
-    background-color: rgb(198, 198, 198);
-    height: 100%;
-    width: 100%;
+    background: $background-color;
+    height: 100vh;
+    width: 100vw;
 
     h1 {
-    width: 100vh;
-    margin: 20px auto;
-    text-align: center;
-    font-size: 60px;
+        width: 100vw;
+        font-size: 60px;
+        margin-top: 50px;
+        text-align: center;
     }
 
-    form {
-        width: 30vw;
-        height: 20vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 50px auto;
-        border: 2px solid black;
-        padding: 20px;
-        border-radius: 20px;
-
-        input {
-            background-color: transparent;
-            border: 2px solid white;
-            border-radius: 5px;
-        }
-
-        #toBeTranslated {
-            height: 20vh;
-        }
-
-        #submit {
-            width: 100px;
-            margin: 10px auto;
-            background-color: black;
-            color: whitesmoke;
-            border-radius: 5px;
-        }
-    }
-
-    h2 {
-    width: 40vh;
-    margin: 0px auto;
-    text-align: left;       
-    }
-
-    p {
-        border: 2px solid black;
-        height: 30vh;
-        width: 30vw;
-        margin: 0px auto;
+    .morseHeading {
+        text-align: center;
         font-size: 40px;
-        padding: 20px;
-        border-radius: 20px;
+        margin: 10px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 100px auto;
+        width: 70vw;
+        height: 45vh;
+
+        h2 {
+            font-size: 40px;
+        }
+        
+        .text-input {
+
+            form {
+                width: 25vw;
+                height: 40vh;
+                display: flex;
+                flex-direction: column;
+                border: 30px solid $dark-color;
+                padding: 10px;
+                border-radius: $border-radius;
+                box-shadow: $box-shadow;
+                background-color: rgba(223, 218, 218, 0.351);
+
+                input {
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 2px solid $dark-color;
+                    padding: 5px;
+
+                    &::placeholder {
+                        color: $dark-color;
+                        outline: none;
+                    }
+
+                    &:focus {
+                        outline: 2px solid $dark-color;
+                    }
+                }
+
+                #toBeTranslated {
+                    height: 25vh;
+                    margin-bottom: 10px;
+                    font-size: 20px;
+                }
+
+                #submit {
+                    width: 120px;
+                    font-size: 18px;
+                    height: 40px;
+                    margin: 0 auto;
+                    background-color: transparent;
+                    color: border-color;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: 0.5s ease;
+                    border: 3px solid $dark-color;
+
+                    &:hover {
+                        background-color: $dark-color;
+                        color: whitesmoke;
+                    }
+                }
+            }
+        }
+
+        svg {
+            font-size: 8.5rem;
+            align-self: center;
+            position: relative;
+            animation-name: leftToRight;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        .text-output {
+            width: 25vw;
+            height: 40vh;
+
+            h2 {
+            width: 40vh;
+            text-align: left;       
+            }
+
+            p {
+                border: 30px solid rgba($border-color, 0.85);
+                height: 40vh;
+                width: 25vw;
+                font-size: 40px;
+                border-radius: $border-radius;
+                box-shadow: $box-shadow;
+                background-color: rgba(223, 218, 218, 0.351);
+            }
+        }
+    }
+}
+
+@keyframes leftToRight {
+    0%   {left: -55px;}
+    50%  {left: 55px;}
+    100% {left: -55px;}
+  }
+
+@media only screen and (max-width: 480px) {
+    * { 
+        width: 100vw;
+    }
+
+    body {
+        .container {
+            flex-direction: column;
+        }
     }
 }
