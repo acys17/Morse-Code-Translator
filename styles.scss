@@ -2,7 +2,7 @@ $border-color: rgb(242, 241, 241);
 $text-color: whitesmoke;
 $background-color: linear-gradient(90deg,#485563, #29323c);
 $border-radius: 10px;
-$dark-color: rgba($border-color, 0.85);
+$light-color: rgba($border-color, 0.85);
 $box-shadow: 20px 20px 50px rgb(53, 53, 53);
 
 * {
@@ -49,32 +49,29 @@ body {
                 height: 40vh;
                 display: flex;
                 flex-direction: column;
-                border: 30px solid $dark-color;
+                border: 30px solid $light-color;
                 padding: 10px;
                 border-radius: $border-radius;
                 box-shadow: $box-shadow;
                 background-color: rgba(111, 111, 111, 0.351);
 
-                input {
-                    background-color: transparent;
-                    border: none;
-                    border-bottom: 2px solid $dark-color;
-                    padding: 5px;
-
-                    &::placeholder {
-                        color: $dark-color;
-                        outline: none;
-                    }
-
-                    &:focus {
-                        outline: 2px solid $dark-color;
-                    }
-                }
-
                 #toBeTranslated {
                     height: 25vh;
                     margin-bottom: 10px;
                     font-size: 20px;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 2px solid $light-color;
+                    padding: 5px;
+
+                    &::placeholder {
+                        color: $light-color;
+                        outline: none;
+                    }
+
+                    &:focus {
+                        outline: 2px solid $light-color;
+                    }
                 }
 
                 #submit {
@@ -87,11 +84,11 @@ body {
                     border-radius: 5px;
                     cursor: pointer;
                     transition: 0.5s ease;
-                    border: 3px solid $dark-color;
+                    border: 3px solid $light-color;
 
                     &:hover {
-                        background-color: $dark-color;
-                        color: whitesmoke;
+                        background-color: $light-color;
+                        color: rgb(29, 29, 29);
                     }
                 }
             }
@@ -123,6 +120,7 @@ body {
                 border-radius: $border-radius;
                 box-shadow: $box-shadow;
                 background-color: rgba(111, 111, 111, 0.351);
+                padding: 5px;
             }
         }
     }

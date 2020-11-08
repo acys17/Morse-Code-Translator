@@ -61,41 +61,38 @@ body .container .text-input form {
   background-color: rgba(111, 111, 111, 0.351);
 }
 
-body .container .text-input form input {
+body .container .text-input form #toBeTranslated {
+  height: 25vh;
+  margin-bottom: 10px;
+  font-size: 20px;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid rgba(242, 241, 241, 0.85);
   padding: 5px;
 }
 
-body .container .text-input form input::-webkit-input-placeholder {
+body .container .text-input form #toBeTranslated::-webkit-input-placeholder {
   color: rgba(242, 241, 241, 0.85);
   outline: none;
 }
 
-body .container .text-input form input:-ms-input-placeholder {
+body .container .text-input form #toBeTranslated:-ms-input-placeholder {
   color: rgba(242, 241, 241, 0.85);
   outline: none;
 }
 
-body .container .text-input form input::-ms-input-placeholder {
+body .container .text-input form #toBeTranslated::-ms-input-placeholder {
   color: rgba(242, 241, 241, 0.85);
   outline: none;
 }
 
-body .container .text-input form input::placeholder {
+body .container .text-input form #toBeTranslated::placeholder {
   color: rgba(242, 241, 241, 0.85);
   outline: none;
 }
 
-body .container .text-input form input:focus {
+body .container .text-input form #toBeTranslated:focus {
   outline: 2px solid rgba(242, 241, 241, 0.85);
-}
-
-body .container .text-input form #toBeTranslated {
-  height: 25vh;
-  margin-bottom: 10px;
-  font-size: 20px;
 }
 
 body .container .text-input form #submit {
@@ -114,7 +111,7 @@ body .container .text-input form #submit {
 
 body .container .text-input form #submit:hover {
   background-color: rgba(242, 241, 241, 0.85);
-  color: whitesmoke;
+  color: #1d1d1d;
 }
 
 body .container svg {
@@ -150,6 +147,7 @@ body .container .text-output p {
   -webkit-box-shadow: 20px 20px 50px #353535;
           box-shadow: 20px 20px 50px #353535;
   background-color: rgba(111, 111, 111, 0.351);
+  padding: 5px;
 }
 
 @-webkit-keyframes leftToRight {
