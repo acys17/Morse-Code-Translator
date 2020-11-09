@@ -12,7 +12,7 @@ const translate = () => {
     // for each letter in array, find letter object and return morse code
     const engToMorseArray = inputArray.map((letter) => {
         const findLetterObject = morseLetters.find(element => element.name === letter);
-        return findLetterObject.code
+        return findLetterObject.code;
     })
 
     // join morse letters back into string

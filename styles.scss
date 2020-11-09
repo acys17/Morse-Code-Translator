@@ -35,7 +35,7 @@ body {
         display: flex;
         justify-content: space-evenly;
         margin: 100px auto;
-        width: 70vw;
+        width: 90vw;
         height: 45vh;
 
         h2 {
@@ -45,7 +45,7 @@ body {
         .text-input {
 
             form {
-                width: 25vw;
+                width: 30vw;
                 height: 40vh;
                 display: flex;
                 flex-direction: column;
@@ -63,6 +63,8 @@ body {
                     border: none;
                     border-bottom: 2px solid $light-color;
                     padding: 5px;
+                    resize: none;
+                    
 
                     &::placeholder {
                         color: $light-color;
@@ -115,7 +117,7 @@ body {
             p {
                 border: 30px solid rgba($border-color, 0.85);
                 height: 40vh;
-                width: 25vw;
+                width: 30vw;
                 font-size: 40px;
                 border-radius: $border-radius;
                 box-shadow: $box-shadow;
@@ -123,6 +125,13 @@ body {
                 padding: 5px;
             }
         }
+    }
+
+    footer {
+        text-align: left;
+        position: relative;
+        top: 80px;
+        left: 50px
     }
 }
 
@@ -132,14 +141,80 @@ body {
     100% {left: -55px;}
   }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
     * { 
         width: 100vw;
+        padding: 0px;
+        margin: 0px;
     }
 
     body {
+        width: 80vw;
+        margin: 0px;
+
+        h1 {
+            height: 20vh;
+            font-size: 50px;
+        }
+
+        .morseHeading {
+            height: 28vh;
+            width: 100vw;
+            font-size: 32px;
+        }
+        
         .container {
             flex-direction: column;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+            h2 {
+                text-align: center;
+                font-size: 24px;
+            }
+
+            .text-input {
+                
+                form {
+                width: 80vw;
+                height: 40vh;
+                margin: 0 auto;
+                border: 10px solid $border-color;
+
+                textarea {
+                    width: 65vw;
+                    margin: 0 auto;
+
+                }
+                }
+            }
+        
+
+        svg {
+            font-size: 6rem;
+            align-self: center;
+            animation: none !important;
+            transform: rotate(90deg);
+            height: 200px;
         }
+
+        .text-output {
+            width: 80vw;
+            height: 40vh;
+            margin-bottom: 100px;
+
+                p {
+                width: 80vw;
+                height: 40vh;
+                border: 10px solid $border-color;
+                }
+            }
+        }
+    }
+
+    footer {
+        margin-bottom: 40px;
     }
 }

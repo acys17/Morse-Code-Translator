@@ -35,7 +35,7 @@ body .container {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   margin: 100px auto;
-  width: 70vw;
+  width: 90vw;
   height: 45vh;
 }
 
@@ -44,7 +44,7 @@ body .container h2 {
 }
 
 body .container .text-input form {
-  width: 25vw;
+  width: 30vw;
   height: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -69,6 +69,7 @@ body .container .text-input form #toBeTranslated {
   border: none;
   border-bottom: 2px solid rgba(242, 241, 241, 0.85);
   padding: 5px;
+  resize: none;
 }
 
 body .container .text-input form #toBeTranslated::-webkit-input-placeholder {
@@ -141,13 +142,20 @@ body .container .text-output h2 {
 body .container .text-output p {
   border: 30px solid rgba(242, 241, 241, 0.85);
   height: 40vh;
-  width: 25vw;
+  width: 30vw;
   font-size: 40px;
   border-radius: 10px;
   -webkit-box-shadow: 20px 20px 50px #353535;
           box-shadow: 20px 20px 50px #353535;
   background-color: rgba(111, 111, 111, 0.351);
   padding: 5px;
+}
+
+body footer {
+  text-align: left;
+  position: relative;
+  top: 80px;
+  left: 50px;
 }
 
 @-webkit-keyframes leftToRight {
@@ -174,15 +182,76 @@ body .container .text-output p {
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   * {
     width: 100vw;
+    padding: 0px;
+    margin: 0px;
+  }
+  body {
+    width: 80vw;
+    margin: 0px;
+  }
+  body h1 {
+    height: 20vh;
+    font-size: 50px;
+  }
+  body .morseHeading {
+    height: 28vh;
+    width: 100vw;
+    font-size: 32px;
   }
   body .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+  }
+  body .container h2 {
+    text-align: center;
+    font-size: 24px;
+  }
+  body .container .text-input form {
+    width: 80vw;
+    height: 40vh;
+    margin: 0 auto;
+    border: 10px solid #f2f1f1;
+  }
+  body .container .text-input form textarea {
+    width: 65vw;
+    margin: 0 auto;
+  }
+  body .container svg {
+    font-size: 6rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-animation: none !important;
+            animation: none !important;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    height: 200px;
+  }
+  body .container .text-output {
+    width: 80vw;
+    height: 40vh;
+    margin-bottom: 100px;
+  }
+  body .container .text-output p {
+    width: 80vw;
+    height: 40vh;
+    border: 10px solid #f2f1f1;
+  }
+  footer {
+    margin-bottom: 40px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
