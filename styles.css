@@ -27,6 +27,71 @@ body .morseHeading {
   margin: 10px;
 }
 
+body .toggle {
+  text-align: center;
+  margin-top: 60px;
+}
+
+body .toggle p {
+  display: inline-block;
+  padding: 10px;
+  font-size: 20px;
+}
+
+body .toggle .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+body .toggle .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+body .toggle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f2f1f1;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+body .toggle .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 3px;
+  background-color: #485563d4;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+body .toggle input:checked + .slider {
+  background-color: #9f9f9f;
+}
+
+body .toggle input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
+
+body .toggle .slider.round {
+  border-radius: 34px;
+}
+
+body .toggle .slider.round:before {
+  border-radius: 50%;
+}
+
 body .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,7 +99,7 @@ body .container {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin: 100px auto;
+  margin: 50px auto;
   width: 90vw;
   height: 45vh;
 }
@@ -189,17 +254,37 @@ body footer {
     margin: 0px;
   }
   body {
-    width: 80vw;
+    width: 100vw;
     margin: 0px;
   }
   body h1 {
-    height: 20vh;
+    height: 26vh;
     font-size: 50px;
   }
   body .morseHeading {
-    height: 28vh;
+    height: 1vh;
     width: 100vw;
     font-size: 32px;
+  }
+  body .toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 50vh;
+    margin-bottom: 10vh;
+  }
+  body .toggle p {
+    width: 40vw;
+    font-size: 18px;
+  }
+  body .toggle .slider {
+    width: 40px;
   }
   body .container {
     -webkit-box-orient: vertical;
