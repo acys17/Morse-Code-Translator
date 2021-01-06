@@ -12,12 +12,13 @@ body {
   background: linear-gradient(90deg, #485563, #29323c);
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 body h1 {
-  width: 100vw;
+  width: inherit;
   font-size: 60px;
-  margin-top: 50px;
+  margin-top: 2vh;
   text-align: center;
 }
 
@@ -29,7 +30,7 @@ body .morseHeading {
 
 body .toggle {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 body .toggle p {
@@ -99,7 +100,7 @@ body .container {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin: 50px auto;
+  margin: 20px auto;
   width: 90vw;
   height: 45vh;
 }
@@ -217,10 +218,12 @@ body .container .text-output p {
 }
 
 body footer {
+  width: 20vw;
   text-align: left;
   position: relative;
-  top: 80px;
+  top: 60px;
   left: 50px;
+  padding-bottom: 15px;
 }
 
 @-webkit-keyframes leftToRight {
@@ -254,8 +257,9 @@ body footer {
     margin: 0px;
   }
   body {
-    width: 100vw;
+    width: inherit;
     margin: 0px;
+    overflow: scroll;
   }
   body h1 {
     height: 26vh;
@@ -263,7 +267,7 @@ body footer {
   }
   body .morseHeading {
     height: 1vh;
-    width: 100vw;
+    width: 90vw;
     font-size: 32px;
   }
   body .toggle {
@@ -337,6 +341,9 @@ body footer {
   }
   footer {
     margin-bottom: 40px;
+  }
+  footer p {
+    width: 60vw;
   }
 }
 /*# sourceMappingURL=styles.css.map */

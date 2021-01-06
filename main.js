@@ -10,12 +10,10 @@ let engToMorse = true;
 checkbox.addEventListener('change', function () {
     if(checkbox.checked){
         engToMorse = false;
-        console.log("engToMorse is false");
     } else {
         engToMorse = true;
-      }
+    }
 });
-
 
 const translateEnglishToMorse = () => {
     // split input string into array of letters

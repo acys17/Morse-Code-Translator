@@ -17,11 +17,12 @@ body {
     background: $background-color;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 
     h1 {
-        width: 100vw;
+        width: inherit;
         font-size: 60px;
-        margin-top: 50px;
+        margin-top: 2vh;
         text-align: center;
     }
 
@@ -33,7 +34,8 @@ body {
 
     .toggle {
         text-align: center;
-        margin-top: 60px;
+        margin-top: 30px;
+
         p {
             display: inline-block;
             padding: 10px;
@@ -95,7 +97,7 @@ body {
     .container {
         display: flex;
         justify-content: space-evenly;
-        margin: 50px auto;
+        margin: 20px auto;
         width: 90vw;
         height: 45vh;
 
@@ -189,10 +191,12 @@ body {
     }
 
     footer {
+        width: 20vw;
         text-align: left;
         position: relative;
-        top: 80px;
-        left: 50px
+        top: 60px;
+        left: 50px;
+        padding-bottom: 15px;
     }
 }
 
@@ -210,8 +214,10 @@ body {
     }
 
     body {
-        width: 100vw;
+        width: inherit;
         margin: 0px;
+        overflow: scroll;
+
 
         h1 {
             height: 26vh;
@@ -220,7 +226,7 @@ body {
 
         .morseHeading {
             height: 1vh;
-            width: 100vw;
+            width: 90vw;
             font-size: 32px;
         }
 
@@ -293,5 +299,8 @@ body {
 
     footer {
         margin-bottom: 40px;
+        p {
+            width: 60vw;
+        }
     }
 }
